@@ -1,0 +1,746 @@
+{% extends 'basic.html' %}
+{% block title %} projects {% endblock title %}
+
+{% block body %}
+{% load static %} 
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #F3F3F3;
+      }
+        .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  pre {
+    background-color: #EBEBEB;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  code {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: #000000;
+  }
+</style>
+<title>5 Reasons Why Python is the Future of Web Development</title>
+    </head>
+  <body>
+    <div class="container">
+      <h1>"5 Reasons Why Python is the Future of Web Development"</h1>
+      <p>Introduction:
+      In the world of web development, Python has quickly become one of the most popular programming languages. With its simple syntax, vast library of modules, and growing community, it's no surprise that Python is taking the web development world by storm. In this blog post, we will explore five reasons why Python is the future of web development.</p>
+      <p><strong>1.Easy to Learn and Use</strong></p>
+        <p>Python's simple and intuitive syntax makes it easy for developers to get started, even if they have no prior programming experience. With a large and supportive community, it's also easy to find help and resources when needed. Here's a simple example of how you can print "Hello, World!" in Python:</p>
+      <pre>
+        <code>
+          print("Hello, World!")
+        </code>
+      </pre>
+      <p><b>2.Wide Range of Applications</b></p>
+        <p>Python is used in a wide range of applications, including web development, scientific computing, data analysis, artificial intelligence, and more. This versatility makes it a great choice for developers who want to work on a variety of projects. Here's a simple example of how you can calculate the mean of a list of numbers in Python:</p>
+      <pre>
+        <code>
+          numbers = [1, 2, 3, 4, 5]
+          mean = sum(numbers) / len(numbers)
+          print("The mean of the numbers is:", mean)
+        </code>
+      </pre>
+      <p><b>3.Robust Library of Modules</b></p>
+        <p>Python's library of modules, also known as packages, is extensive and well-maintained. This means that developers can easily find pre-built solutions for common tasks, saving time and effort. Here's an example of how you can use the popular requests module to make an HTTP request in Python:</p>
+      <pre>
+        <code>
+          import requests
+          response = requests.get("https://www.example.com")
+          print(response.text)
+        </code>
+      </pre>
+      <p><b>4.Growing Community</b></p>
+        <p>The Python community is one of the largest and most active programming communities in the world. With regular updates, new modules, and a thriving community of developers, Python is constantly evolving and improving.</p>
+      <p><b>5.Great for Web Development</b></p>
+        <p>Python is a great choice for web development due to its simplicity, versatility, and robust library of modules. Whether you're building a small website or a complex web application, Python has the tools and resources you need to get the job done. Here's a simple example of how you can use the popular Flask framework to create a web application in Python:</p>
+      <pre>
+        <code>
+            from flask import Flask
+            app = Flask(__name__)
+            @app.route("/")
+            def index():
+                return "Hello, World!"
+            if __name__ == "__main__":
+                app.run()
+        </code>
+      </pre>
+        <p><strong>Number Guessing Game</strong></p>
+        <pre>
+        <code>
+          import random
+          n = random.randrange(1,3)
+          guess = int(input("enter number"))
+          while n != guess:
+              if n < 0:
+                  print("Too Low")
+                  guess = int(input("Enter number again: "))
+              elif n > 0:
+                  print("Too High")
+                  guess = int(input("Enter number again: "))
+              else:
+                  break
+          print("you guessed it right!!")
+        </code>
+      </pre>
+      <p><strong>Calculate Mean, Median, and Mode using Python</strong></p>
+      <pre>
+        <code>
+          import numpy as np
+          from scipy import stats
+
+          speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+          Mean = np.mean(speed)
+          Median = np.median(speed)
+          Mode = stats.mode(speed)
+
+          print("Mean :",Mean)
+          print("Median :",Median)
+          print("Mode :",Mode)
+        </code>
+      </pre>
+      <p><strong>Age Calculator using Python</strong></p>
+      <pre>
+        <code>
+         import datetime
+         def datetimes(y, m, d):
+             today = datetime.datetime.now().date()
+             DOB = datetime.date(y, m, d)
+             page = int((today - DOB).days/365)
+         print(age)
+         datetimes(1999, 10, 22)
+          </code>
+      </pre>
+      <p><strong>Check Anagram Matching word</strong></p>
+      <pre>
+        <code>
+         from collections import defaultdict
+         def anagram(a):
+             dfdict = defaultdict(list)
+              for i in a:
+                 sorted_i = " ".join(sorted(i))
+                 dfdict[sorted_i].append(i)
+                 return dfdict.values()
+
+         words = ["tea", "eat", "bat", "ate", "arc", "car"]
+         print(anagram(words))
+          </code>
+      </pre>
+      <p><strong>Find Missing Number</strong></p>
+      <pre>
+        <code>
+         def findMissingNumbers(n):
+             numbers = set(n)
+             length = len(n)
+             output = []
+             for i in range(1, n[-1]):
+                  if i not in numbers:
+                      output.append(i)
+             return output
+
+         listOfNumbers = [2,6, 7, 8, 9, 10, 11, 13, 14, 16]
+         print(findMissingNumbers(listOfNumbers))
+          </code>
+      </pre>
+        <p><strong>Rock Paper Scissors Game using Python</strong></p>
+        <pre>
+        <code>
+import random
+player1 = input("Select Rock, Paper, or Scissor :").lower()
+player2 = random.choice(["Rock", "Paper", "Scissor"]).lower()
+print("Player 2 selected: ", player2)
+
+if player1 == "rock" and player2 == "paper":
+    print("Player 2 Won")
+elif player1 == "paper" and player2 == "scissor":
+    print("Player 2 Won")
+elif player1 == "scissor" and player2 == "rock":
+    print("Player 2 Won")
+elif player1 == player2:
+    print("Tie")
+else:
+    print("Player 1 Won")
+        </code>
+      </pre>
+<p><strong>Print Emojis using Python</strong></p>
+        <pre>
+        <code>
+import emoji
+print(emoji.emojize(":pen:"))
+print(emoji.emojize(":hibiscus:"))
+print(emoji.emojize(":thumbs_up:"))
+print(emoji.emojize(":smiling_face:"))
+print(emoji.emojize(":red_heart:"))
+        </code>
+      </pre>
+<p><strong>Scrape Table from a Website using Python</strong></p>
+        <pre>
+        <code>
+import urllib.request
+import pandas as pd
+url = "https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites"
+
+with urllib.request.urlopen(url) as i:
+    html = i.read()
+
+data = pd.read_html(html)[0]
+print(data.head())
+        </code>
+      </pre>
+<p><strong>Extract Text From PDF using Python</strong></p>
+        <pre>
+        <code>
+import PyPDF2
+pdf = open("sathasivam5.pdf", "rb")
+reader = PyPDF2.PdfReader(pdf)
+page = reader.pages[0]
+print(page.extract_text())
+        </code>
+      </pre>
+<p><strong>SequenceMatcher in Python</strong></p>
+        <pre>
+        <code>
+from difflib import SequenceMatcher
+text1 = "My Name is Sathasivam"
+text2 = "Hi, My Name is Satha"
+sequenceScore = SequenceMatcher(None, text1, text2).ratio()
+print(f"Both are {sequenceScore * 100} % similar")
+        </code>
+      </pre>
+        <p><strong>Create QR Code Using Python</strong></p>
+        <pre>
+        <code>
+import pyqrcode
+import png
+from PIL import Image
+link = "https://www.instagram.com/sadha__siva__/"
+qr_code = pyqrcode.create(link)
+qr_code.png("QRCode.png", scale=5)
+Image.open("QRCode.png")
+        </code>
+      </pre>
+<p><strong>Creating Dummy Data using Python</strong></p>
+        <pre>
+        <code>
+from faker import Faker
+import pandas as pd
+fake = Faker()
+data = [fake.profile() for i in range(50)]
+data = pd.DataFrame(data)
+data.head()
+        </code>
+      </pre>
+<p><strong>Remove Cuss Words using Python</strong></p>
+        <pre>
+        <code>
+from better_profanity import profanity
+text = "Please leave me alone and just piss off"
+censored = profanity.censor(text)
+print(censored)
+        </code>
+      </pre>
+<p><strong>Find Duplicate Values using Python</strong></p>
+        <pre>
+        <code>
+import pandas as pd
+
+new_list = [('Australia', 9, 'Germany'),
+          ('China', 14, 'France'), ('Paris', 77, 'switzerland'),
+          ('Australia',9, 'Germany'), ('China', 88, 'Russia'),
+         ('Germany', 77, 'Bangladesh')]
+
+result= pd.DataFrame(new_list, columns=['Country_name', 'Value', 'new_country'])
+new_output = result[result.duplicated()]
+print("Duplicated values : ")
+new_output
+        </code>
+      </pre>
+<p><strong>Voice Recorder using Python</strong></p>
+        <pre>
+        <code>
+import sounddevice
+from scipy.io.wavfile import write
+
+def voice_recorder(seconds, file):
+    print("Recording Started…")
+    recording = sounddevice.rec((seconds * 44100), samplerate= 44100, channels=2)
+    sounddevice.wait()
+    write(file, 44100, recording)
+    print("Recording Finished")
+
+voice_recorder(10, "record.wav")
+        </code>
+      </pre>
+        <p><strong>Reading and Writing CSV Files using Python</strong></p>
+        <pre>
+        <code>
+# writing a csv file
+import csv
+import pandas as pd
+data = {"Name": ["sadha", "Daniel", "shanmuga", "Subash", "Anwar"],
+        "Age": [23, 21, 25, 23, 22]}
+data = pd.DataFrame(data)
+data.to_csv("Friends_data.csv", index=False)
+data.head()
+        </code>
+      </pre>
+<p><strong>Find the Most Frequent Words in a File</strong></p>
+        <pre>
+        <code>
+words = []
+with open("sample.txt", "r") as f:
+    for line in f:
+        words.extend(line.split())
+
+from collections import Counter
+counts = Counter(words)
+top2 = counts.most_common(2)
+top2
+        </code>
+      </pre>
+<p><strong>Animated Scatter Plot using Python</strong></p>
+        <pre>
+        <code>
+import plotly.express as px
+data = px.data.gapminder()
+data.head()
+px.scatter(data, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
+           size="pop", color="country", hover_name="country",
+           log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
+        </code>
+      </pre>
+<p><strong>Create Font Art using Python</strong></p>
+        <pre>
+        <code>
+import pyfiglet
+font = pyfiglet.figlet_format('Sathasivam')
+print(font)
+        </code>
+      </pre>
+<p><strong>Phone Number Details using Python</strong></p>
+        <pre>
+        <code>
+import phonenumbers as ph
+from phonenumbers import carrier
+from phonenumbers import geocoder
+from phonenumbers import timezone
+
+number = "+916xxxxxxxxx"
+number = ph.parse(number)
+print(timezone.time_zones_for_number(number))
+print(carrier.name_for_number(number, "en"))
+print(geocoder.description_for_number(number, "en"))
+        </code>
+      </pre>
+<p><strong>Print a Calendar using Python</strong></p>
+        <pre>
+        <code>
+import calendar
+print(calendar.month(2023, 1))
+        </code>
+      </pre>
+<p><strong>speedtest</strong></p>
+        <pre>
+        <code>
+import speedtest
+wifi  = speedtest.Speedtest()
+print("Wifi Download Speed is ", wifi.download())
+print("Wifi Upload Speed is ", wifi.upload())
+        </code>
+      </pre>
+        <p><strong>Shutdown Computer using Python</strong></p>
+        <pre>
+        <code>
+#Shutdown Computer using Python
+import os
+def shutdown_PC():
+    os.system("shutdown /s /t 1")
+shutdown_PC()
+        </code>
+      </pre>
+<p><strong>Defang IP Address using Python</strong></p>
+        <pre>
+        <code>
+def ip_address(address):
+    new_address = ""
+    split_address = address.split(".")
+    separator = "[.]"
+    new_address = separator.join(split_address)
+    return new_address
+ipaddress = ip_address("1.1.2.3")
+print(ipaddress)
+        </code>
+      </pre>
+<p><strong>Merge Sort using Python</strong></p>
+        <pre>
+        <code>
+def merge(listA, listB):
+    newlist = list()
+    a = 0
+    b = 0
+    while a < len(listA) and b < len(listB):
+        if listA[a] < listB[b]:
+            newlist.append(listA[a])
+            a += 1
+        else:
+            newlist.append(listB[b])
+            b += 1
+    while a < len(listA):
+        newlist.append(listA[a])
+        a += 1
+    while b < len(listB):
+        newlist.append(listB[b])
+        b += 1
+    return newlist
+
+def merge_sort(input_list):
+    if len(input_list) <= 1:
+        return input_list
+    else:
+        mid = len(input_list) // 2
+        left = merge_sort(input_list[:mid])
+        right = merge_sort(input_list[mid:])
+        newlist = merge(left, right)
+        return newlist
+
+a = [56, 89, 45, 34, 90, 32, 20, 67, 43]
+print(merge_sort(a))
+        </code>
+      </pre>
+<p><strong>Quartile Deviation using Python</strong></p>
+        <pre>
+        <code>
+import numpy as np
+data = list(range(20, 100, 5))
+print(data)
+
+Q1 = np.quantile(data, 0.25)
+Q2 = np.quantile(data, 0.50)
+Q3 = np.quantile(data, 0.75)
+
+print("Quartile 1 : ", Q1)
+print("Quartile 2 : ", Q2)
+print("Quartile 3 : ", Q3)
+
+def QuartileDeviation(a, b):
+    return (a - b)/2
+print(QuartileDeviation(Q3, Q1))
+        </code>
+      </pre>
+<p><strong>algorithm for counting character occurrences using Python</strong></p>
+        <pre>
+        <code>
+def count_char(s):
+    count = {}
+    for i in s:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+    return count
+
+print(count_char("Thecleverprogrammer"))
+        </code>
+      </pre>
+<p><strong>Sequential Search using Python</strong></p>
+        <pre>
+        <code>
+def seq_search(list, n):
+    found = False
+    for i in list:
+        if i == n:
+            found = True
+            break
+    return found
+
+num = list(range(0,10))
+seq_search(num, 4)
+        </code>
+      </pre>
+        <p><strong>Swap Variables using Python</strong></p>
+        <pre>
+        <code>
+a = 8
+b = 10
+a, b = b, a
+print("a = ", a)
+print("b = ", b)
+        </code>
+      </pre>
+<p><strong>Sorting NumPy Arrays</strong></p>
+        <pre>
+        <code>
+import numpy as np
+a = np.array([34, 5, 89, 23, 76])
+print(np.sort(a))
+        </code>
+      </pre>
+<p><strong>Validate Anagrams</strong></p>
+        <pre>
+        <code>
+def anagram(word1, word2):
+    word1 = word1.lower()
+    word2 = word2.lower()
+    return sorted(word1) == sorted(word2)
+
+print(anagram("cinema", "iceman"))
+print(anagram("cool", "loco"))
+print(anagram("men", "women"))
+        </code>
+      </pre>
+<p><strong>Backward For Loop using Python</strong></p>
+        <pre>
+        <code>
+list = ["Amar", "siva", "Akash", "Hritika", "Shiwangi"]
+for i in reversed(list):
+    print(i)
+        </code>
+      </pre>
+<p><strong>Queues using Python</strong></p>
+        <pre>
+        <code>
+class queue:
+    def __init__(self):
+        self.items = [1]
+    def is_empty(self):
+        return self.items == []
+    def enqueue(self, item):
+        self.items.insert(2, item)
+    def dequeue(self):
+        return self.items.pop()
+    def size(self):
+        return len(self.items)
+        </code>
+      </pre>
+<p><strong>Currency Converter with Python</strong></p>
+        <pre>
+        <code>
+from forex_python.converter import CurrencyRates
+c = CurrencyRates()
+amount = int(input("Enter the amount: "))
+from_currency = input("From Currency: ").upper()
+to_currency = input("To Currency: ").upper()
+print(from_currency, " To ", to_currency, amount)
+result = c.convert(from_currency, to_currency, amount)
+print(result)
+        </code>
+      </pre>
+<p><strong>FizzBuzz Algorithm using Python</strong></p>
+        <pre>
+        <code>
+for i in range(1, 20):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+        </code>
+      </pre>
+<p><strong>Invoice Generator with Python</strong></p>
+        <pre>
+        <code>
+product1_name, product1_price = 'Books', 50.95
+product2_name, product2_price = 'Computer', 598.99
+product3_name, product3_price = 'Monitor', 156.89
+
+# create a company name and information
+company_name = 'Thecleverprogrammer, inc.'
+company_address = '144 Kalka ji.'
+company_city = 'New Delhi'
+
+# declare ending message
+message = 'Thanks for shopping with us today!'
+
+# create a top border
+print('*' * 50)
+
+# print company information first using format
+print('\t\t{}'.format(company_name.title()))
+print('\t\t{}'.format(company_address.title()))
+print('\t\t{}'.format(company_city.title()))
+
+# print a line between sections
+print('=' * 50)
+
+# print out header for section of items
+print('\tProduct Name\tProduct Price')
+
+# create a print statement for each item
+print('\t{}\t\t${}'.format(product1_name.title(), product1_price))
+print('\t{}\t${}'.format(product2_name.title(), product2_price))
+print('\t{}\t\t${}'.format(product3_name.title(), product3_price))
+
+# print a line between sections
+print('=' * 50)
+
+# print out header for section of total
+print('\t\t\tTotal')
+
+# calculate total price and print out
+total = product1_price + product2_price + product3_price
+print('\t\t\t${}'.format(total))
+
+# print a line between sections
+print('=' * 50)
+
+# output thank you message
+print('\n\t{}\n'.format(message))
+
+# create a bottom border
+print('*' * 50)
+        </code>
+      </pre>
+        <p><strong>Create Acronyms using Python</strong></p>
+        <pre>
+        <code>
+user_input = str(input("Enter a Phrase: "))
+text = user_input.split()
+a = " "
+for i in text:
+    a = a+str(i[0]).upper()
+print(a)
+        </code>
+      </pre>
+<p><strong>Story Generator with Python</strong></p>
+        <pre>
+        <code>
+import random
+when = ['A few years ago', 'Yesterday', 'Last night', 'A long time ago','On 20th Jan']
+name = ['sadha', 'Mani','subash', 'karthi', 'kumar']
+residence = ['Barcelona','India', 'Germany', 'Venice', 'England']
+went = ['cinema', 'university','seminar', 'school', 'laundry']
+happened = ['made a lot of friends','Eats a burger', 'found a secret key', 'solved a mistery', 'wrote a book']
+print(random.choice(when) + ', ' + ' that lived in ' + random.choice(residence) + ', went to the ' + random.choice(went) + ' and ' + random.choice(happened))
+        </code>
+      </pre>
+<p><strong>Fahrenheit to Celcius Converter</strong></p>
+        <pre>
+        <code>
+def convert(s):
+    f = float(s)
+    c = (f - 32) * 5/9
+    return c
+print("Celcius :")
+print(convert(84))
+        </code>
+      </pre>
+<p><strong>Generate Password with Python</strong></p>
+        <pre>
+        <code>
+import random
+passlen = int(input("enter the length of password"))
+s="abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+p = "".join(random.sample(s,passlen ))
+print(p)
+        </code>
+      </pre>
+<p><strong>BMI Calculator</strong></p>
+        <pre>
+        <code>
+Height=float(input("Enter your height in centimeters: "))
+Weight=float(input("Enter your Weight in Kg: "))
+Height = Height/100
+BMI=Weight/(Height*Height)
+print("your Body Mass Index is: ",BMI)
+if(BMI>0):
+	if(BMI<=16):
+		print("you are severely underweight")
+	elif(BMI<=18.5):
+		print("you are underweight")
+	elif(BMI<=25):
+		print("you are Healthy")
+	elif(BMI<=30):
+		print("you are overweight")
+	else: print("you are severely overweight")
+else:("enter valid details")
+        </code>
+      </pre>
+<p><strong>Taking Multiple User Inputs</strong></p>
+        <pre>
+        <code>
+while True:
+    reply = input("Enter Text: ")
+    if reply == 'stop': break
+    print(reply)
+        </code>
+      </pre>
+<p><strong>Scrape IMDb with Python</strong></p>
+        <pre>
+        <code>
+import imdb
+ia = imdb.IMDb()
+
+items = ia.search_movie('Avengers')
+for i in items:
+    print(i)
+        </code>
+      </pre>
+<p><strong>Live Weather Updates with Python</strong></p>
+        <pre>
+        <code>
+from bs4 import BeautifulSoup
+import requests
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+def weather(city):
+    city=city.replace(" ","+")
+    res = requests.get(f'https://www.google.com/search?q={city}&oq={city}&aqs=chrome.0.35i39l2j0l4j46j69i60.6128j1j7&sourceid=chrome&ie=UTF-8',headers=headers)
+    print("Searching......\n")
+    soup = BeautifulSoup(res.text,'html.parser')
+    location = soup.select('#wob_loc')[0].getText().strip()
+    time = soup.select('#wob_dts')[0].getText().strip()
+    info = soup.select('#wob_dc')[0].getText().strip()
+    weather = soup.select('#wob_tm')[0].getText().strip()
+    print(location)
+    print(time)
+    print(info)
+    print(weather+"°C")
+
+city=input("Enter the Name of Any City >>  ")
+city=city+" weather"
+weather(city)
+        </code>
+      </pre>
+<p><strong>Draw RJD Using Python</strong></p>
+        <pre>
+        <code>
+from sketchpy import library as lib
+obj = lib.rdj()
+obj.draw()
+        </code>
+      </pre>
+<p><strong>For more python codes and Project check my GitHub Page.....Thank You</strong></p>
+    </div>
+  </body>
+</html>
+
+{% endblock body %}

@@ -17,6 +17,8 @@ def handleblog(request):
 def about(request):
     return render(request, 'about.html')
 
+def projects(request):
+    return render(request, 'projects.html')
 
 def internshipdetails(request):
     if not request.user.is_authenticated:
